@@ -11,6 +11,7 @@
      --txt-footer-cl: rgba(255, 255, 255, 0.60);
      --black-cl: #000000;
      --border-cl: #ECECEC;
+     --icon-cl: rgba(175, 177, 184, 1);
 
      /* background colors */
      --dark-bg: #2F303A;
@@ -146,6 +147,7 @@ img {
 
 .contact-nav {
     display: flex;
+    align-items: center;
     margin-left: auto;
 }
 
@@ -158,6 +160,8 @@ img {
 }
 
 .email, .phone {
+    display: flex;
+    align-items: center;
     color:var(--main-cl);
         font-size: 14px;
         font-weight: 500;
@@ -165,15 +169,28 @@ img {
         letter-spacing: 0.28px;
 }
 
-.email:hover,
-.email:focus,
-.phone:hover,
-.phone:focus {
+.contact-icon {
+    fill: rgba(117, 117, 117, 1);
+    margin-right: 10px;
+} 
+
+/* .contact-icon:hover,
+.contact-icon:focus {
+    fill: var(--accent-cl);
+} */
+
+ .email:hover, 
+ .email:focus, 
+ .phone:hover,
+ .phone:focus {
     color: var(--accent-cl);
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1;
-    letter-spacing: 0.28px;
+}
+
+.email:hover .contact-icon,
+.email:focus .contact-icon,
+.phone:hover .contact-icon,
+.phone:focus .contact-icon {
+    fill: var(--accent-cl);
 }
 
 /* secrion hero */
@@ -265,6 +282,17 @@ img {
         letter-spacing: 0.42px;
 }
 
+.background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 270px;
+    height: 120px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+        background: var(--light-bg);
+}
+
 /* section activity + section team*/
 
 .activity {
@@ -331,6 +359,7 @@ img {
 }
 
 .member-position {
+    margin-bottom: 16px;
 
     color: var(--main-cl);
         text-align: center;
@@ -339,9 +368,76 @@ img {
         letter-spacing: 0.48px;
 }
 
+/* Social icons */
+
 .social-list { 
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background-color: #FFF;
+    border-radius: 50%;
+}
+
+.social-link:hover,
+.social-link:focus {
+   background-color: var(--accent-bg);
+}
+.social-item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.social-icon {
+    fill: var(--icon-cl);
+}
+
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
+    fill: rgba(255, 255, 255, 1);
+}
+
+/* Clients section */
+
+.client-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.client-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 170px;
+    height: 92px;
+    border-radius: 4px;
+    border: 1px solid #AFB1B8;
+}
+
+.client-item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.client-link:hover,
+.client-link:focus {
+    border-color: var(--accent-cl);
+}
+
+.client-icon {
+    fill: var(--icon-cl);
+}
+
+.client-link:hover .client-icon,
+.client-link:focus .client-icon {
+    fill: var(--accent-cl);
 }
 
 /* Footer */ 
@@ -352,14 +448,63 @@ img {
 }
 
 .footer > .container {
-    display: block;
+    display: flex;
 
+}
+
+.footer-address {
+    margin-right: 70px;
+}
+
+.footer-title {
+    
+    color: var(--white-cl);
+    margin-top: 12px;
+    margin-bottom: 20px;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.42px;
+        text-transform: uppercase;
 }
 
 .footer .logo {
     margin-right: 0;
 }
 
+.footer-cont {
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.10);
+}
+
+.footer-link:hover,
+.footer-link:focus {
+    background-color: var(--accent-bg);
+}
+
+.footer-icon {
+    fill: var(--white-cl) ;
+}
+
+.footer-item:not(:last-child) {
+    margin-right: 10px;
+}
 .address {
     margin-top: 20px;
     display: block;
@@ -430,13 +575,15 @@ img {
 
 .btn.active {
     color: var(--white-cl);
-    background-color:var(--accent-bg) ;  
+    background-color:var(--accent-bg) ; 
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.10);
 }
 
 .btn.filter:hover,
 .btn.filter:focus {
     color: var(--white-cl);
     background-color: var(--accent-bg);
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.10);
 }
 
 .cards-set {
@@ -474,4 +621,8 @@ img {
 
 .cards-link {
     text-decoration: none;
+}
+
+.cards-set > .item:hover {
+        box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
 }
