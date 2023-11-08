@@ -449,7 +449,7 @@ img {
 
 .footer > .container {
     display: flex;
-
+    align-items: baseline;
 }
 
 .footer-address {
@@ -459,7 +459,7 @@ img {
 .footer-title {
     
     color: var(--white-cl);
-    margin-top: 12px;
+   
     margin-bottom: 20px;
         font-size: 14px;
         font-weight: 700;
@@ -623,6 +623,7 @@ img {
     text-decoration: none;
 }
 
-.cards-set > .item:hover {
+.item > .cards-link:hover,
+.item > .cards-link:focus {
         box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
 }
